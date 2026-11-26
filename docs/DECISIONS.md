@@ -18,8 +18,13 @@ Newest last. Each entry: decision, reason, alternatives, date.
 ## D4: Read-only root filesystem (overlayfs) — 2026-11-25
 - **Why:** Power loss on a battery system can corrupt SD cards mid-write. Models and knowledge live on a separate partition or NVMe.
 
+## D5: Model family is Qwen2.5 (3B-Instruct, Q4_K_M) — 2026-11-26
+- **Why:** Fits the Pi 5 8GB comfortably (about 2.4GB), Apache 2.0 license, and rated well in Pi 5 tests. Runs via llama.cpp, which is faster and lighter than Ollama on the Pi.
+- **Fallback:** Qwen2.5-1.5B-Instruct as a low-power mode if battery runtime matters more than answer quality.
+- **Considered:** Gemma 4 E2B (faster, smaller memory), Llama 3.2 3B and 1B.
+- **To verify:** tokens/sec, power draw and answer quality on our own survival question set before this is final.
+
 ## Open questions
-- Which model and quantization (candidates: 1.5B-3B class such as Qwen, Gemma, Llama 3.2)?
 - NVMe vs microSD for model storage?
 - Interface: screen, buttons, voice, or all three?
 - Battery chemistry and solar panel wattage for target runtime?

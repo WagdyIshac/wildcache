@@ -1,8 +1,8 @@
-# Off-Grid Survival SLM
+# wildcache: Off-Grid Survival SLM
 
 A small language model running on a Raspberry Pi 5, powered by battery and solar, that gives survival guidance with no internet connection.
 
-**Status:** Hardware chosen, OS plan defined. Next: model selection and survival knowledge base.
+**Status:** Hardware, OS plan and model family chosen. Next: benchmarks and the survival knowledge base.
 
 ## Goals
 - Run fully offline on a battery and solar budget
@@ -24,7 +24,7 @@ A small language model running on a Raspberry Pi 5, powered by battery and solar
 ## Roadmap
 - [x] 1. Choose device
 - [x] 2. Choose OS approach
-- [ ] 3. Choose model and quantization; benchmark tokens/sec and power draw
+- [ ] 3. Model: Qwen2.5-3B-Instruct Q4_K_M chosen (see D5); benchmark tokens/sec and power draw
 - [ ] 4. Build offline knowledge base (RAG)
 - [ ] 5. Power system: battery, solar panel, charge controller, runtime tests
 - [ ] 6. Read-only root and auto-start service
