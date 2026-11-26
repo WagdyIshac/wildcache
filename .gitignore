@@ -1,0 +1,8 @@
+# Large files and local artifacts
+models/*.gguf
+models/*.bin
+*.img
+*.img.xz
+*.log
+.env
+__pycache__/
